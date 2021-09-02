@@ -1,0 +1,85 @@
+2021-08-31 16:34:11 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Schema.php(147): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/controllers/MigrateController.php(199): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(771): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(135): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Users/sudhakar/Documents/projects/Library_Module/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php:549
+Stack trace:
+#0 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#1 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#2 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/db/Schema.php(147): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/controllers/MigrateController.php(199): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(771): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(135): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /Users/sudhakar/Documents/projects/Library_Module/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Users/sudhakar/Documents/projects/Library_Module/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2021-08-31 16:34:11 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/yx/q5lp64357xjff6_p7jl9c8xh0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.vov73BRqKY/Render'
+    'TERM_PROGRAM_VERSION' => '421'
+    'OLDPWD' => '/Users/sudhakar/Documents/projects'
+    'TERM_SESSION_ID' => '025AB410-EDA4-4052-AD27-EA41C833CC17'
+    'USER' => 'calibraint'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.OXIlF4oe3Y/Listeners'
+    'PATH' => '/usr/local/opt/php@5.6/sbin:/usr/local/opt/php@5.6/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/sudhakar/Documents/projects/Library_Module'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/sudhakar'
+    'LOGNAME' => 'calibraint'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => '/usr/local/opt/php@5.6/bin/php'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0:2'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1630427651.7633
+    'REQUEST_TIME' => 1630427651
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
